@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>ユーザー追加</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="user" placeholder="ユーザーネーム">
+    <input type="text" name="passwd" placeholder="password">
+    <input type="text" name="age" placeholder="年齢">
+    <input type="submit" value="提出">
+
+</form>
+</body>
+</html>

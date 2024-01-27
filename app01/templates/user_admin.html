@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Userリスト</h1>
+
+<a href="/user/add/" target="_blank">追加</a>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>名前</th>
+        <th>パスワード</th>
+        <th>年齢</th>
+        <th>編集</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for obj in data_list %}
+    <tr>
+        <td>{{ obj.id }}</td>
+        <td>{{ obj.name }}</td>
+        <td>{{ obj.passwd }}</td>
+        <td>{{ obj.age }}</td>
+        <td>
+            <a href="http://127.0.0.1:8000/user/delete/?nid={{ obj.id }}">削除</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

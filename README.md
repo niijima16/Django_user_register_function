@@ -1,3 +1,3 @@
-Python　Version 3.12.0
+Python　Version 3.12.0　/n
 ライブラリはanaconda利用し､envでライブラリ管理しました｡
 ローカル環境にあるMySQLを使った簡単なユーザー登録・削除・一覧表示を出してくれるものになります｡

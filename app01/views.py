@@ -12,7 +12,6 @@ def index(request):
     return HttpResponse("hello, thankyou. thankyou very much.")
 
 
-
 def tpl(request):
     name = "SkadiP"
     roles = ["manager", "CEO", "Security"]
@@ -79,6 +78,7 @@ def user_admin(req):
 
     return render(req, "user_admin.html", {"data_list": data_list})
 
+
 # 2.ユーザー追加ページ
 def user_add(req):
     if req.method == "GET":
@@ -87,9 +87,10 @@ def user_add(req):
     passwd = req.POST.get("passwd")
     age = req.POST.get("age")
 
-    UserInfo.objects.create(name=user,passwd=passwd, age= age)
+    UserInfo.objects.create(name=user, passwd=passwd, age=age)
 
     return redirect("/user/admin/")
+
 
 # 3.ユーザー削除機能
 def user_delete(req):
